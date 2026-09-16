@@ -1,4 +1,4 @@
-# Cloudflare Gen - Opencode Skill
+# Cloudflare Gen - AI Agent Skill
 
 [English](#english) | [中文](#中文)
 
@@ -8,7 +8,7 @@
 
 ### 簡介
 
-這是一個 [Opencode](https://opencode.ai) 的 skill，使用 Cloudflare Workers AI 的 FLUX.1 Schnell 模型生成高品質圖片。
+這是一個適用於任何支援 skills 的 AI Agent 的圖片生成工具，使用 Cloudflare Workers AI 的 FLUX.1 Schnell 模型生成高品質圖片（如 [Opencode](https://opencode.ai)、其他兼容平台）。
 
 - 免費額度：每天約 230 張
 - 無需信用卡
@@ -16,12 +16,10 @@
 
 ### 安裝方式
 
-1. 確保你已安裝 [Opencode](https://opencode.ai)
-2. 將 `SKILL.md` 複製到你的 opencode skills 目錄：
-   ```
-   ~/.config/opencode/skills/cloudflare-gen/SKILL.md
-   ```
-3. 重新啟動 opencode
+1. 將 `SKILL.md` 放入你的 agent 的 skills 目錄中：
+   - **Opencode：** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`
+   - **其他 Agent：** 參考你的 agent 文件，找到 skills 目錄位置
+2. 重新啟動你的 AI Agent
 
 ### 前置需求：取得 Cloudflare 憑證（免費）
 
@@ -46,7 +44,7 @@ $env:CF_ACCOUNT_ID = "你的ACCOUNT_ID"
 
 ### 使用方式
 
-在 Opencode 中輸入：
+在你的 AI Agent 中輸入：
 
 ```
 /gen-img 一隻可愛的貓咪坐在窗台上
@@ -76,7 +74,7 @@ $env:CF_ACCOUNT_ID = "你的ACCOUNT_ID"
 
 ### Introduction
 
-This is an [Opencode](https://opencode.ai) skill that uses Cloudflare Workers AI's FLUX.1 Schnell model to generate high-quality images.
+This is an image generation tool for any AI Agent that supports skills, using Cloudflare Workers AI's FLUX.1 Schnell model to generate high-quality images (such as [Opencode](https://opencode.ai) and other compatible platforms).
 
 - Free quota: ~230 images per day
 - No credit card required
@@ -84,12 +82,10 @@ This is an [Opencode](https://opencode.ai) skill that uses Cloudflare Workers AI
 
 ### Installation
 
-1. Make sure you have [Opencode](https://opencode.ai) installed
-2. Copy `SKILL.md` to your opencode skills directory:
-   ```
-   ~/.config/opencode/skills/cloudflare-gen/SKILL.md
-   ```
-3. Restart opencode
+1. Place the `SKILL.md` file into your agent's skills directory:
+   - **Opencode:** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`
+   - **Other Agents:** Refer to your agent's documentation to find the skills directory location
+2. Restart your AI Agent
 
 ### Prerequisites: Get Cloudflare Credentials (Free)
 
@@ -114,7 +110,7 @@ $env:CF_ACCOUNT_ID = "YOUR_ACCOUNT_ID"
 
 ### Usage
 
-In Opencode, type:
+In your AI Agent, type:
 
 ```
 /gen-img a cute cat sitting on a windowsill
