@@ -8,7 +8,18 @@
 
 ### 簡介
 
-這是一個適用於任何支援 skills 的 AI Agent 的圖片生成工具，使用 Cloudflare Workers AI 的 FLUX.1 Schnell 模型生成高品質圖片（如 [Opencode](https://opencode.ai)、其他兼容平台）。
+這是一個適用於任何支援 skills 的 AI Agent 的圖片生成工具，使用 Cloudflare Workers AI 的 FLUX.1 Schnell 模型生成高品質圖片（如 [Opencode](https://opencode.ai)、[Claude Code](https://code.claude.com)、[Codex](https://developers.openai.com/codex)、[Cursor](https://cursor.com)、[GitHub Copilot](https://github.com/features/copilot)、[Gemini CLI / Antigravity](https://developers.googleblog.com/en/introducing-antigravity)）。
+
+### 支援的 AI Agent
+
+| AI Agent | 專案路徑 | 全域路徑 |
+|----------|----------|----------|
+| [Opencode](https://opencode.ai/docs/skills/) | `.opencode/skills/cloudflare-gen/SKILL.md` | `~/.config/opencode/skills/cloudflare-gen/SKILL.md` |
+| [Claude Code](https://code.claude.com/docs/en/skills) | `.claude/skills/cloudflare-gen/SKILL.md` | `~/.claude/skills/cloudflare-gen/SKILL.md` |
+| [Codex](https://developers.openai.com/codex/skills) | `.codex/skills/cloudflare-gen/SKILL.md` | `~/.codex/skills/cloudflare-gen/SKILL.md` |
+| [Cursor](https://cursor.com/docs/context/skills) | `.cursor/skills/cloudflare-gen/SKILL.md` | `~/.cursor/skills/cloudflare-gen/SKILL.md` |
+| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/skills) | `.github/skills/cloudflare-gen/SKILL.md` | `~/.copilot/skills/cloudflare-gen/SKILL.md` |
+| [Gemini CLI / Antigravity](https://developers.googleblog.com/en/introducing-antigravity) | `.gemini/skills/cloudflare-gen/SKILL.md` | `~/.gemini/skills/cloudflare-gen/SKILL.md` |
 
 - 免費額度：每天約 230 張
 - 無需信用卡
@@ -16,10 +27,10 @@
 
 ### 安裝方式
 
-1. 將 `SKILL.md` 放入你的 agent 的 skills 目錄中：
-   - **Opencode：** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`
-   - **其他 Agent：** 參考你的 agent 文件，找到 skills 目錄位置
+1. 將 `SKILL.md` 放入你的 agent 的 skills 目錄中（見上表，例如 **Opencode：** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`，**Claude Code：** `~/.claude/skills/cloudflare-gen/SKILL.md`）：
 2. 重新啟動你的 AI Agent
+
+> 本 skill 遵循 Agent Skills 開放標準，僅使用 `curl` 呼叫 API、無廠商專屬 hook，上述 6 家 agent 皆可直接使用。
 
 ### 前置需求：取得 Cloudflare 憑證（免費）
 
@@ -74,7 +85,18 @@ $env:CF_ACCOUNT_ID = "你的ACCOUNT_ID"
 
 ### Introduction
 
-This is an image generation tool for any AI Agent that supports skills, using Cloudflare Workers AI's FLUX.1 Schnell model to generate high-quality images (such as [Opencode](https://opencode.ai) and other compatible platforms).
+This is an image generation tool for any AI Agent that supports skills, using Cloudflare Workers AI's FLUX.1 Schnell model to generate high-quality images (such as [Opencode](https://opencode.ai), [Claude Code](https://code.claude.com), [Codex](https://developers.openai.com/codex), [Cursor](https://cursor.com), [GitHub Copilot](https://github.com/features/copilot), [Gemini CLI / Antigravity](https://developers.googleblog.com/en/introducing-antigravity)).
+
+### Supported AI Agents
+
+| AI Agent | Project path | Global path |
+|----------|--------------|-------------|
+| [Opencode](https://opencode.ai/docs/skills/) | `.opencode/skills/cloudflare-gen/SKILL.md` | `~/.config/opencode/skills/cloudflare-gen/SKILL.md` |
+| [Claude Code](https://code.claude.com/docs/en/skills) | `.claude/skills/cloudflare-gen/SKILL.md` | `~/.claude/skills/cloudflare-gen/SKILL.md` |
+| [Codex](https://developers.openai.com/codex/skills) | `.codex/skills/cloudflare-gen/SKILL.md` | `~/.codex/skills/cloudflare-gen/SKILL.md` |
+| [Cursor](https://cursor.com/docs/context/skills) | `.cursor/skills/cloudflare-gen/SKILL.md` | `~/.cursor/skills/cloudflare-gen/SKILL.md` |
+| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/skills) | `.github/skills/cloudflare-gen/SKILL.md` | `~/.copilot/skills/cloudflare-gen/SKILL.md` |
+| [Gemini CLI / Antigravity](https://developers.googleblog.com/en/introducing-antigravity) | `.gemini/skills/cloudflare-gen/SKILL.md` | `~/.gemini/skills/cloudflare-gen/SKILL.md` |
 
 - Free quota: ~230 images per day
 - No credit card required
@@ -82,10 +104,10 @@ This is an image generation tool for any AI Agent that supports skills, using Cl
 
 ### Installation
 
-1. Place the `SKILL.md` file into your agent's skills directory:
-   - **Opencode:** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`
-   - **Other Agents:** Refer to your agent's documentation to find the skills directory location
+1. Place the `SKILL.md` file into your agent's skills directory (see table above, e.g. **Opencode:** `~/.config/opencode/skills/cloudflare-gen/SKILL.md`, **Claude Code:** `~/.claude/skills/cloudflare-gen/SKILL.md`):
 2. Restart your AI Agent
+
+> This skill follows the Agent Skills open standard and only uses `curl` to call the API with no vendor-specific hooks, so all 6 agents above work directly.
 
 ### Prerequisites: Get Cloudflare Credentials (Free)
 
